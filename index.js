@@ -2,44 +2,51 @@
 
 /**
  * ### Challenge `processFirstItem`
- * 
+ *
  * @instructions
  * Implement a higher-order function called `processFirstItem`.
  * It takes two arguments:
  * @param stringList an array of strings.
  * @param callback function that takes a string as its argument.
  * @returns the result of invoking `callback` with the FIRST element in `stringList`.
- * 
+ *
  * Example of usage of this higher-order function:
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
-*/
+ */
 function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
+  return callback(stringList[0]);
 }
 
 // ⭐️ Example Challenge END ⭐️
-
+//
 
 ///// M V P ///////
 
 /* Task 1: `counterMaker`
  * Study the code for counter1 and counter2. Answer the questions below.
- * 
- * 1. What is the difference between counter1 and counter2?
- * 
- * 2. Which of the two uses a closure? How can you tell?
- * 
- * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
-*/
+ * 1. What is the difference between counter1 and counter2?
+ *  Counter1 code uses a closure and keeps its variables in a local scope
+ *  Counter2 does not use a closure, and therefore its variables are in global scope
+ *  Both codes increment the counter
+ *
+ * 2. Which of the two uses a closure? How can you tell?
+ *  Counter1 uses a closure, by setting a function within a function
+ *
+ * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?
+ *  Counter1 would be preferable if you wanted to keep your variables inside the function and only be able
+ *  to call them within the function counterMaker only.
+ *
+ * Counter2 would be preferable if you wanted to be able to reuse the count variable within the rest of the code.
+ */
 
 // counter1 code
 function counterMaker() {
   let count = 0;
   return function counter() {
-   return count++;
-  }
+    return count++;
+  };
 }
 
 const counter1 = counterMaker();
@@ -51,16 +58,23 @@ function counter2() {
   return count++;
 }
 
-
 /* Task 2: inning() 
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+// function inning(scores){
+//   return function score(){[Math.floor(Math.random()*scores.length)];
+//     /*Code Here*/
 
-    /*Code Here*/
+// }}
+// const scores = [0, 1, 2];
+// console.log(inning(scores));
 
-}
+// function inning(scores){
+//   return scores[Math.floor(Math.random()*scores.length)];
+// }
+// const scores = [0, 1, 2];
+// console.log(inning(scores));
 
 /* Task 3: finalScore()
 
@@ -68,19 +82,52 @@ Write a higher order function called `finalScore` that accepts the callback func
 
 For example, 
 
+
+
 finalScore(inning, 9) might return: 
 {
   "Home": 11,
   "Away": 5,
 }
 
-*/ 
+*/
+// function finalScore(inning, 8) {
+//   function inning (scores){
+//     return scores[Math.floor(Math.random()*scores.length)];
+// }
+// const scores = [0, 1, 2];
+//   }
 
-function finalScore(/*code Here*/){
 
-  /*Code Here*/
+// function finalScore(inning, numberOfInnings) {
 
+//   function inning(){
+//     return scoreList[9]
+//   }
+  
+
+  
+// }
+// console.log (finalScore(s))
+function getScore(whatever){
+  return scoreList[whatever];
 }
+
+let scoreList = [
+  {"Home":0, "Away": 2512},
+  {"Home":0, "Away": 2},
+  {"Home":1, "Away": 3},
+  {"Home":3, "Away": 6},
+  {"Home":4, "Away": 6},
+  {"Home":7, "Away": 7},
+  {"Home":7, "Away": 7},
+  {"Home":8, "Away": 9},
+  {"Home":11, "Away": 10},
+];
+
+// console.log(inning(2));
+console.log (getScore(0));
+
 
 /* Task 4: 
 
@@ -102,9 +149,6 @@ and returns the score at each pont in the game, like so:
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
 
-
 function scoreboard(/* CODE HERE */) {
   /* CODE HERE */
 }
-
-
