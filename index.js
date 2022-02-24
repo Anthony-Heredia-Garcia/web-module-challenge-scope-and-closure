@@ -137,6 +137,13 @@ Create a function called `scoreboard` that accepts the following parameters:
 (2) Callback function `inning`
 (3) A number of innings
 
+
+function that makes a scoreboard like below.
+activate 'function scoreboard()' by passing number of innings (9) and function 'inning' to generate scores, creating list below.
+function calling 'inning' will generate random scores from task above.
+'a number of innings' will take my input (9) and create 9 innings worth of scores?
+activate this function
+
 and returns the score at each pont in the game, like so:
 1st inning: awayTeam - homeTeam
 2nd inning: awayTeam - homeTeam
@@ -149,15 +156,31 @@ and returns the score at each pont in the game, like so:
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(getInningScore, inning, numberOfInnings) {
-  function getInningScore() {
+// function scoreboard(getInningScore, inning, numberOfInnings) {
+//   function getInningScore() {
+//     return getInningScore(scoreList[chosenInning]);
+//   }
+//   function inning(){
+//     return 
+//   }
 
-  }
-  function inning(){
+//   let numberOfInnings = scoreList;
+//   /* CODE HERE */
+// }
 
-  }
+// function writeStuff(){
+//   function scores(score){
+//     return scores[Math.floor(Math.random()*scores.length)];
+//   }
+//   return console.log(`1st inning: ${scores} - ${inning(scores)}`)
+// }
 
-  let numberOfInnings = scoreList; 
-  /* CODE HERE */
-}
 
+// function inning(scores){
+//   return scores[Math.floor(Math.random()*scores.length)];
+// }
+// const scores = [0, 1, 2];
+// // console.log(inning(scores));
+
+
+// writeStuff()
