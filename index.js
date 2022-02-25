@@ -98,36 +98,32 @@ finalScore(inning, 9) might return:
 // const scores = [0, 1, 2];
 //   }
 
-
 // function finalScore(inning, numberOfInnings) {
 
 //   function inning(){
 //     return scoreList[9]
 //   }
-  
 
-  
 // }
 // console.log (finalScore(s))
-function getScore(whatever){
+function getScore(whatever) {
   return scoreList[whatever];
 }
 
 let scoreList = [
-  {"Home":0, "Away": 2512},
-  {"Home":0, "Away": 2},
-  {"Home":1, "Away": 3},
-  {"Home":3, "Away": 6},
-  {"Home":4, "Away": 6},
-  {"Home":7, "Away": 7},
-  {"Home":7, "Away": 7},
-  {"Home":8, "Away": 9},
-  {"Home":11, "Away": 10},
+  { Home: 0, Away: 2512 },
+  { Home: 0, Away: 2 },
+  { Home: 1, Away: 3 },
+  { Home: 3, Away: 6 },
+  { Home: 4, Away: 6 },
+  { Home: 7, Away: 7 },
+  { Home: 7, Away: 7 },
+  { Home: 8, Away: 9 },
+  { Home: 11, Away: 10 },
 ];
 
 // console.log(inning(2));
-console.log (getScore(0));
-
+console.log(getScore(0));
 
 /* Task 4: 
 
@@ -161,7 +157,7 @@ Final Score: awayTeam - homeTeam */
 //     return getInningScore(scoreList[chosenInning]);
 //   }
 //   function inning(){
-//     return 
+//     return
 //   }
 
 //   let numberOfInnings = scoreList;
@@ -175,13 +171,52 @@ Final Score: awayTeam - homeTeam */
 //   return console.log(`1st inning: ${scores} - ${inning(scores)}`)
 // }
 
-
 // function inning(scores){
 //   return scores[Math.floor(Math.random()*scores.length)];
 // }
 // const scores = [0, 1, 2];
 // // console.log(inning(scores));
 
-
 // writeStuff()
 //
+
+// function even_or_odd(number) {
+//   if (number %2 === 0) {
+//     console.log("Even");
+//   }
+//   else {
+//     console.log("Odd");
+//   }
+// }
+
+// even_or_odd(24);
+
+// function positiveSum(arr) {
+//   positive = arr.filter(function (a) {
+//     return a >= 0;
+//   });
+//   sum = positive.reduce(function (a, b) {
+//     return a + b;
+//   });
+// }
+
+// function positiveSum(arr) {
+//   while (arr.length && arr[arr.length -1] < 0) {
+//     arr.pop();
+//   }
+//   for (let i = arr.length - 1; i >=0; i--) {
+//     if (arr[i] < 0) {
+//       arr[i] = arr[arr.length - 1];
+//       arr.pop();
+//     }
+//   }
+//   return arr;
+// }
+
+function positiveSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 0) sum += arr[i];
+  }
+  return sum;
+}
